@@ -124,7 +124,7 @@ control MyIngress(inout headers hdr,
 
     apply {
         if (hdr.srcRoutes[0].isValid()){
-            if (hdr.srcRoutes[0].bos == 1){
+            if (hdr.srcRoutes[0].bos == 1) {
                 srcRoute_finish();
             }
             srcRoute_nhop();
@@ -151,7 +151,7 @@ control MyEgress(inout headers hdr,
 *************   C H E C K S U M    C O M P U T A T I O N   **************
 *************************************************************************/
 
-control MyComputeChecksum(inout headers  hdr, inout metadata meta) {
+control MyComputeChecksum(inout headers hdr, inout metadata meta) {
     apply {  }
 }
 
